@@ -35,11 +35,16 @@ public class InputProjects {
                 e.printStackTrace();
             }
 
-            for (int i=0; i< contributorNum; i++) {
-                scanner.nextLine();
+            for(int i=0; i < contributorNum;i++){
+                line = scanner.nextLine();
+                splitLine = line.split(" ");
+                int contributorskills = Integer.parseInt(splitLine[1]);
+                for(int y = 0; y < contributorskills;y++){
+                    scanner.nextLine();
+                }
             }
 
-            for(int i=0; i < projectNum;i++){
+            for(int i=0; i < projectNum; i++){
 
                 Map<String, Integer> skillLevels = new HashMap<String, Integer>();
                 Project project = new Project("test",skillLevels);
