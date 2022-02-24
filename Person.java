@@ -26,4 +26,7 @@ public class Person {
         return skillLevels.entrySet();
     }
 
+    public Map<String, Integer> getSkillLevels() {
+        return skillLevels;
+    }
 }
