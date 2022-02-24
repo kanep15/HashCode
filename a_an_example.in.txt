@@ -1,13 +1,13 @@
-3 3
-Anna 1
-C++ 2
+3 3  //contributors projects
+Anna 1 // contributor number of skills
+C++ 2  /skill how goood
 Bob 2
 HTML 5
 CSS 5
 Maria 1
 Python 3
-Logging 5 10 5 1
-C++ 3
+Logging 5 10 5 1   // project // days taken to complete //score // best before //roles
+C++ 3 // skill // difficuly
 WebServer 7 10 7 2
 HTML 3
 C++ 2
