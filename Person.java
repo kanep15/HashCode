@@ -29,4 +29,8 @@ public class Person {
     public Map<String, Integer> getSkillLevels() {
         return skillLevels;
     }
+
+    public int getSkilllevel(String skill){
+        return skillLevels.get(skill);
+    }
 }

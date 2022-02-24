@@ -64,4 +64,7 @@ public class Project {
     public void setNumOfRoles(int numOfRoles) {
         this.numOfRoles = numOfRoles;
     }
+    public int getSkilllevel(String skill){
+        return skillneeded.get(skill);
+    }
 }

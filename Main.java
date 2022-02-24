@@ -17,11 +17,18 @@ public class Main {
             Set positions = projects.get(i).getProjectSkill();
             int days = projects.get(i).getDaysToComplete();
 
-            String[] array = new String[positions.size()];
+            String[] projectskills = new String[][positions.size()];
+            int k = 0;
+            for (Object x : positions) {
+                projectskills[k++] = (String) x;
+            }
+
+
+
 
             for (int j = 0; j < contributors.size(); j++) {
                 for (int k = 0; k < positions.size(); k++) {
-                    if (contributors.get(j).getSkill().contains(array[k])) {
+                    if (contributors.get(j).getSkill().contains(projectskills[k]) && contributors.get(j).getSkilllevel(projectskills[k]) < ) {
 
                     } else {
 
