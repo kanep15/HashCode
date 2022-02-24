@@ -13,28 +13,23 @@ public class Main {
 
         for(int i = 0; i< projects.size(); i++){
 
-            String projectName = projects.get(i).getName();
-            Set positions = projects.get(i).getProjectSkill();
-            int days = projects.get(i).getDaysToComplete();
-
-            String[] projectskills = new String[][positions.size()];
-            int k = 0;
-            for (Object x : positions) {
-                projectskills[k++] = (String) x;
-            }
-
-
-
+            Project bucket = projects.get(i);
 
             for (int j = 0; j < contributors.size(); j++) {
-                for (int k = 0; k < positions.size(); k++) {
-                    if (contributors.get(j).getSkill().contains(projectskills[k]) && contributors.get(j).getSkilllevel(projectskills[k]) < ) {
+                for (int k = 0; k < bucket.getProjectSkill().size(); k++) {
+                    if(contributors.get(j).getSkill().contains(bucket.getSkilllevel()))
 
-                    } else {
-
-                    }
                 }
+
             }
+
+
+
+
+
+
+
+
         }
     }
 }
