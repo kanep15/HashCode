@@ -44,13 +44,21 @@ public class InputFile {
                 int contributorskills = Integer.parseInt(splitLine[1]);
                 line = scanner.nextLine();
                 splitLine = line.split(" ");
-                String skillName = splitLine[0];
+                String skillName = (String) splitLine[0];
+
+                //System.out.println(skillName);
+
                 int skillLevel = Integer.parseInt(splitLine[1]);
-                Map<String, Integer> skillLevels = new HashMap<>();
+
+                //System.out.println(skillLevel);
+
+                HashMap<String, Integer> skillLevels = new HashMap<String, Integer>(1,skillName);
                 Person contributor = new Person("test",skillLevels);
                 for(int y = 0; y < contributorskills;y++){
+                    skillLevels = new HashMap<>(skillName,skillLevel);
+
                     contributor.setName(contributorName);
-                    contributor.setSkillLevels(skillName,skillLevel);
+                    contributor.setSkillLevels(skillLevels);
 
 
                     System.out.println(contributor.getName());

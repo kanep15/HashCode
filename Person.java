@@ -4,10 +4,10 @@ import java.util.Set;
 
 public class Person {
     private String name;
-    private Map<String, Integer> skillLevels = new HashMap<>();
+    private Map<String, Integer> skillLevels;
 
     public Person(String name, Map skills) {
-        skillLevels = skills;
+        skills = skillLevels;
         name = name;
     }
 
@@ -15,12 +15,11 @@ public class Person {
         this.name = name;
     }
 
-    public void setSkillLevels(Map<String, Integer> skillLevels) {
+    public void setSkillLevels(HashMap<String, Integer> skillLevels) {
         this.skillLevels = skillLevels;
     }
 
-    public void setSkillLevels(String skillName, int skillLevel) {
-    }
+
 
     public String getName() {
         return name;
