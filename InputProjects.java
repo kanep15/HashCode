@@ -53,9 +53,14 @@ public class InputProjects {
                 splitLine = line.split(" ");
 
                 String projectName = splitLine[0];
+                int numberOfDays = Integer.parseInt(splitLine[1]);
+                int scoreAwarded = Integer.parseInt(splitLine[2]);
+                int bestBefore = Integer.parseInt(splitLine[3]);
                 int projectSkills = Integer.parseInt(splitLine[4]);
 
-
+                project.setDaysToComplete(numberOfDays);
+                project.setScore(scoreAwarded);
+                project.setBestBefore(bestBefore);
 
                 for(int y = 0; y < projectSkills;y++){
                     line = scanner.nextLine();
