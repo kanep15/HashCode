@@ -5,10 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class InputFile {
+public class InputContributors {
     public static ArrayList main() {
 
         String fileName = "b_better_start_small.in.txt";
+        //String fileName = "c_collaboration.in.txt";
 
         File data = new File(fileName);
         return filter(data);
@@ -23,9 +24,6 @@ public class InputFile {
 
             int contributorNum = 0;
             int projectNum = 0;
-            //String contributorName ="hold";
-            //int contributorskills = 0;
-            //Person contributor;
 
             try{
                 contributorNum = Integer.parseInt(splitLine[0]);
@@ -39,14 +37,16 @@ public class InputFile {
 
             for(int i=0; i < contributorNum;i++){
 
+                Map<String, Integer> skillLevels = new HashMap<String, Integer>();
+                Person contributor = new Person("test",skillLevels);
+
                 line = scanner.nextLine();
                 splitLine = line.split(" ");
 
                 String contributorName = splitLine[0];
                 int contributorskills = Integer.parseInt(splitLine[1]);
 
-                Map<String, Integer> skillLevels = new HashMap<String, Integer>();
-                Person contributor = new Person("test",skillLevels);
+
 
                 for(int y = 0; y < contributorskills;y++){
                     line = scanner.nextLine();
@@ -59,24 +59,9 @@ public class InputFile {
 
                     contributor.setName(contributorName);
                     contributor.setSkillLevels(skillLevels);
-
-
-                    System.out.println(contributor.getName());
-                    System.out.println(contributor.getSkill());
-
-
                     contributors.add(contributor);
-
-
                 }
-
             }
-
-
-
-
-
-
 
         }catch (FileNotFoundException e) {
             System.out.println("File Not Found");
