@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class InputFile {
@@ -44,7 +46,8 @@ public class InputFile {
                 splitLine = line.split(" ");
                 String skillName = splitLine[0];
                 int skillLevel = Integer.parseInt(splitLine[1]);
-                Person contributor = null;
+                Map<String, Integer> skillLevels = new HashMap<>();
+                Person contributor = new Person("test",skillLevels);
                 for(int y = 0; y < contributorskills;y++){
                     contributor.setName(contributorName);
                     contributor.setSkillLevels(skillName,skillLevel);
