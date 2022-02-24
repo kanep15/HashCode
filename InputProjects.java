@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class InputContributors {
+public class InputProjects {
     public static ArrayList main() {
 
         String fileName = "b_better_start_small.in.txt";
@@ -15,19 +15,19 @@ public class InputContributors {
         return filter(data);
     }
     private static ArrayList filter(File file) {
-        ArrayList<Person> contributors = new ArrayList<Person>();
+        ArrayList<Project> projects = new ArrayList<Project>();
 
         try {
             Scanner scanner = new Scanner(file);
             String line = scanner.nextLine();
             String[] splitLine = line.split(" ");
 
-            int contributorNum = 0;
             int projectNum = 0;
+            int contributorNum = 0;
 
             try{
-                contributorNum = Integer.parseInt(splitLine[0]);
                 projectNum = Integer.parseInt(splitLine[1]);
+                contributorNum = Integer.parseInt(splitLine[0]);
 
             }
             catch (NumberFormatException e) {
@@ -35,20 +35,24 @@ public class InputContributors {
                 e.printStackTrace();
             }
 
-            for(int i=0; i < contributorNum;i++){
+            for (int i=0; i< contributorNum; i++) {
+                scanner.nextLine();
+            }
+
+            for(int i=0; i < projectNum;i++){
 
                 Map<String, Integer> skillLevels = new HashMap<String, Integer>();
-                Person contributor = new Person("test",skillLevels);
+                Project project = new Project("test",skillLevels);
 
                 line = scanner.nextLine();
                 splitLine = line.split(" ");
 
-                String contributorName = splitLine[0];
-                int contributorskills = Integer.parseInt(splitLine[1]);
+                String projectName = splitLine[0];
+                int projectSkills = Integer.parseInt(splitLine[4]);
 
 
 
-                for(int y = 0; y < contributorskills;y++){
+                for(int y = 0; y < projectSkills;y++){
                     line = scanner.nextLine();
                     splitLine = line.split(" ");
 
@@ -57,9 +61,9 @@ public class InputContributors {
 
                     skillLevels.put(skillName, skillLevel);
 
-                    contributor.setName(contributorName);
-                    contributor.setSkillLevels(skillLevels);
-                    contributors.add(contributor);
+                    project.setName(projectName);
+                    project.setProjectSkills(skillLevels);
+                    projects.add(project);
                 }
             }
 
@@ -69,7 +73,7 @@ public class InputContributors {
         }
 
 
-        return contributors;
+        return projects;
     }
 
 }

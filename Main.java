@@ -6,10 +6,12 @@ public class Main {
     public static void main(String[] args){
         //System.out.println("Hello World");
 
-        ArrayList<Person> data = InputContributors.main();
+        ArrayList<Person> contributors = InputContributors.main();
+        ArrayList<Project> projects = InputProjects.main();
 
-        for(int i = 0; i< data.size(); i++){
-            System.out.println(data.get(i).getName()+" "+data.get(i).getSkill());
+        for(int i = 0; i< contributors.size(); i++){
+            System.out.println(contributors.get(i).getName()+" "+contributors.get(i).getSkill());
+            System.out.println(projects.get(i).getName()+" "+projects.get(i).getProjectSkill());
 
 
 

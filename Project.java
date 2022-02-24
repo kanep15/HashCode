@@ -12,6 +12,11 @@ public class Project {
 
     private Map<String, Integer> skillneeded = new HashMap<>();
 
+    public Project(String name, Map skills) {
+        skillneeded = skills;
+        name = name;
+    }
+
     public void setProjectSkills(Map<String, Integer> skillLevels) {
         this.skillneeded = skillLevels;
     }
@@ -60,4 +65,3 @@ public class Project {
         this.numOfRoles = numOfRoles;
     }
 }
-
