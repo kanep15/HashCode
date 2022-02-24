@@ -15,9 +15,10 @@ public class Main {
 
             Project bucket = projects.get(i);
 
+
             for (int j = 0; j < contributors.size(); j++) {
                 for (int k = 0; k < bucket.getProjectSkill().size(); k++) {
-                    if(contributors.get(j).getSkill().contains(bucket.getSkilllevel()))
+                    if(contributors.get(j).getSkill().contains(bucket.getSkilllevel(k))){
 
                 }
 
