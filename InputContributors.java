@@ -5,10 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class InputFile {
+public class InputContributors {
     public static ArrayList main() {
 
-        String fileName = "b_better_start_small.in.txt";
+        //String fileName = "b_better_start_small.in.txt";
+        String fileName = "c_collaboration.in.txt";
 
         File data = new File(fileName);
         return filter(data);
@@ -61,8 +62,8 @@ public class InputFile {
                     contributor.setSkillLevels(skillLevels);
 
 
-                    System.out.println(contributor.getName());
-                    System.out.println(contributor.getSkill());
+                    //System.out.println(contributor.getName());
+                    //System.out.println(contributor.getSkill());
 
 
                     contributors.add(contributor);
