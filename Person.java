@@ -1,11 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class People {
+public class Person {
     private String name;
     private Map<String, Integer> skillLevels = new HashMap<>();
 
-    public People(String name, Map map) {
+    public Person(String name, Map map) {
         skillLevels = map;
         name = name;
     }
