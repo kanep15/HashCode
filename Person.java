@@ -19,9 +19,6 @@ public class Person {
         this.skillLevels = skillLevels;
     }
 
-    public void setSkillLevels(String skillName, int skillLevel) {
-    }
-
     public String getName() {
         return name;
     }

@@ -38,26 +38,34 @@ public class InputFile {
             }
 
             for(int i=0; i < contributorNum;i++){
+
                 line = scanner.nextLine();
                 splitLine = line.split(" ");
+
                 String contributorName = splitLine[0];
                 int contributorskills = Integer.parseInt(splitLine[1]);
-                line = scanner.nextLine();
-                splitLine = line.split(" ");
-                String skillName = splitLine[0];
-                int skillLevel = Integer.parseInt(splitLine[1]);
-                Map<String, Integer> skillLevels = new HashMap<>();
+
+                Map<String, Integer> skillLevels = new HashMap<String, Integer>();
                 Person contributor = new Person("test",skillLevels);
+
                 for(int y = 0; y < contributorskills;y++){
+                    line = scanner.nextLine();
+                    splitLine = line.split(" ");
+
+                    String skillName = splitLine[0];
+                    int skillLevel = Integer.parseInt(splitLine[1]);
+
+                    skillLevels.put(skillName, skillLevel);
+
                     contributor.setName(contributorName);
-                    contributor.setSkillLevels(skillName,skillLevel);
+                    contributor.setSkillLevels(skillLevels);
 
 
                     System.out.println(contributor.getName());
                     System.out.println(contributor.getSkill());
 
 
-                contributors.add(contributor);
+                    contributors.add(contributor);
 
 
                 }
@@ -76,7 +84,7 @@ public class InputFile {
         }
 
 
-    return contributors;
+        return contributors;
     }
 
 }
