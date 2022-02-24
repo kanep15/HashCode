@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Person {
     private String name;
@@ -20,4 +21,12 @@ public class Person {
 
     public void setSkillLevels(String skillName, int skillLevel) {
     }
+
+    public String getName() {
+        return name;
+    }
+    public Set<Map.Entry<String, Integer>> getSkill() {
+        return skillLevels.entrySet();
+    }
+
 }

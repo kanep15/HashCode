@@ -52,6 +52,11 @@ public class InputFile {
                     contributor.setName(contributorName);
                     contributor.setSkillLevels(skillName,skillLevel);
 
+
+                    System.out.println(contributor.getName());
+                    System.out.println(contributor.getSkill());
+
+
                 contributors.add(contributor);
 
 
